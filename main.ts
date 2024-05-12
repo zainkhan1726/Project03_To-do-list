@@ -10,20 +10,20 @@ while (condition)
     let todosAction = await inquirer.prompt(
     [
         {
-            name: "firstAction",
+            name: "addTask",
             type: "input",
             message: "What would you like to add more in your todos?",
         },
         {
-            name: "secondAction",
+            name: "addMore",
             type: "confirm",
             message: "Would you like to add more in your todos",
-            default: "true",
+            default: true,
         }
     ]
     )
 
-    todos.push(todosAction.firstAction);
+    todos.push(todosAction.addTask);
     console.log(todos);
-    condition = todosAction.secondAction;
+    condition = todosAction.addMore;
     }
